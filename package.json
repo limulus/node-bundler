@@ -1,0 +1,29 @@
+{
+  "name": "iojs-bundler",
+  "version": "1.0.0",
+  "description": "Bundle io.js in native applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/desertnet/iojs-bundler.git"
+  },
+  "keywords": [
+    "iojs",
+    "bundler",
+    "installer",
+    "downloader",
+    "build-automation"
+  ],
+  "author": "Eric McCarthy <eric@limulus.net> (http://www.limulus.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/desertnet/iojs-bundler/issues"
+  },
+  "homepage": "https://github.com/desertnet/iojs-bundler",
+  "devDependencies": {
+    "mocha": "^2.2.1"
+  }
+}
