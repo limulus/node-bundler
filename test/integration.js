@@ -16,7 +16,7 @@ describe("Installation (integration tests)", function () {
   var installer, installation
 
   before(function (done) {
-    this.timeout(5000)
+    this.timeout(10000)
 
     rimraf.sync(targetPath)
     mkdirp.sync(path.resolve(targetPath, installPath))
