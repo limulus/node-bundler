@@ -10,6 +10,7 @@ var Installer = require("../lib/Installer.js")
 var targetPath = path.resolve(__dirname, "..", "dist", "my.bundle")
 var installPath = path.join("Resources", "ThirdParty")
 var modulePath = path.resolve(__dirname, "..", "fixtures", "some-module")
+var myiojsAppPath = path.join("Resources", "my-iojs-app")
 
 describe("Installation (integration tests)", function () {
   var installer, installation
@@ -19,6 +20,7 @@ describe("Installation (integration tests)", function () {
 
     fse.removeSync(targetPath)
     fse.mkdirsSync(path.resolve(targetPath, installPath))
+    fse.mkdirsSync(path.resolve(targetPath, myiojsAppPath, "node_modules"))
 
     installer = new Installer(targetPath, "*")  // You should never use "*"
     installer.install(installPath, function (err, theInstallation) {
@@ -46,9 +48,8 @@ describe("Installation (integration tests)", function () {
 
   describe("npm()", function () {
     it("should be able to install a module", function (done) {
-      var myiojsAppPath = path.resolve(targetPath, "Resources/my-iojs-app")
-      var installedModulePackageJson = path.resolve(myiojsAppPath, "node_modules", "some-module", "package.json")
-
+      this.timeout(10000)
+      var installedModulePackageJson = path.resolve(targetPath, myiojsAppPath, "node_modules", "some-module", "package.json")
       fse.mkdirsSync(myiojsAppPath)
       installation.npm(myiojsAppPath, ["install", modulePath], function (err) {
         assert.ifError(err)
