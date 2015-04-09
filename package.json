@@ -2,7 +2,9 @@
   "name": "iojs-bundler",
   "version": "1.1.0",
   "description": "Bundle io.js in native applications",
-  "os" : [ "!win32" ],
+  "os": [
+    "!win32"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "mocha"
@@ -32,10 +34,12 @@
     "bluebird": "^2.9.24",
     "extend": "^2.0.0",
     "fs-extra": "^0.18.0",
-    "lzma-native": "^0.2.11",
     "request": "^2.55.0",
     "semver": "^4.3.3",
     "split": "^0.3.3",
     "tar": "^2.0.1"
+  },
+  "optionalDependencies": {
+    "lzma-native": "^0.2.11"
   }
 }
