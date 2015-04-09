@@ -8,10 +8,9 @@ This module helps you automate including [io.js](https://iojs.org/) in binary di
 
 ## Usage
 
-An example, using [Gulp](http://gulpjs.com/).
+An example, using [Gulp](http://gulpjs.com/), minus proper error handling:
 
 ```javascript
-var gulp = require("gulp")
 var iojsBundler = require("iojs-bundler")
 
 gulp.task("iojs", function (done) {
