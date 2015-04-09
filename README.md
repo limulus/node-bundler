@@ -23,5 +23,3 @@ gulp.task("iojs", function (done) {
   })
 })
 ```
-
-## API
