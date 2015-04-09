@@ -50,7 +50,6 @@ describe("Installation (integration tests)", function () {
     it("should be able to install a module", function (done) {
       this.timeout(10000)
       var installedModulePackageJson = path.resolve(targetPath, myiojsAppPath, "node_modules", "some-module", "package.json")
-      fse.mkdirsSync(myiojsAppPath)
       installation.npm(myiojsAppPath, ["install", modulePath], function (err) {
         assert.ifError(err)
         assert(fs.existsSync(installedModulePackageJson))
