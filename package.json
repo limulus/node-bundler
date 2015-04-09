@@ -2,6 +2,7 @@
   "name": "iojs-bundler",
   "version": "1.0.0",
   "description": "Bundle io.js in native applications",
+  "os" : [ "!win32" ],
   "main": "index.js",
   "scripts": {
     "test": "mocha"
