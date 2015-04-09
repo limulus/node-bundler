@@ -30,8 +30,8 @@
   "dependencies": {
     "bluebird": "^2.9.24",
     "extend": "^2.0.0",
+    "fs-extra": "^0.18.0",
     "lzma-native": "^0.2.11",
-    "mkdirp": "^0.5.0",
     "request": "^2.55.0",
     "semver": "^4.3.3",
     "split": "^0.3.3",

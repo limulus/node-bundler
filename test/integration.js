@@ -1,10 +1,9 @@
 "use strict"
 
 var assert = require("assert")
-var mkdirp = require("mkdirp")
-var rimraf = require("rimraf")
 var path = require("path")
 var fs = require("fs")
+var fse = require("fs-extra")
 
 var Installer = require("../lib/Installer.js")
 
@@ -18,8 +17,8 @@ describe("Installation (integration tests)", function () {
   before(function (done) {
     this.timeout(35000)
 
-    rimraf.sync(targetPath)
-    mkdirp.sync(path.resolve(targetPath, installPath))
+    fse.removeSync(targetPath)
+    fse.mkdirsSync(path.resolve(targetPath, installPath))
 
     installer = new Installer(targetPath, "*")  // You should never use "*"
     installer.install(installPath, function (err, theInstallation) {
@@ -50,7 +49,7 @@ describe("Installation (integration tests)", function () {
       var myiojsAppPath = path.resolve(targetPath, "Resources/my-iojs-app")
       var installedModulePackageJson = path.resolve(myiojsAppPath, "node_modules", "some-module", "package.json")
 
-      mkdirp.sync(myiojsAppPath)
+      fse.mkdirsSync(myiojsAppPath)
       installation.npm(myiojsAppPath, ["install", modulePath], function (err) {
         assert.ifError(err)
         assert(fs.existsSync(installedModulePackageJson))
