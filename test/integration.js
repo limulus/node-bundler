@@ -30,12 +30,15 @@ describe("Installation (integration tests)", function () {
     })
   })
 
-  it("should have installed something that looks like iojs", function () {
-    var expectedIojsDirName = "iojs"
+  var expectedIojsDirName = function () {
+    return "iojs"
       + "-" + "v" + installation.version()
       + "-" + process.platform
       + "-" + process.arch
-    var installedIojsBinPath = path.resolve(targetPath, installPath, expectedIojsDirName, "bin", "iojs")
+  }
+
+  it("should have installed something that looks like iojs", function () {
+    var installedIojsBinPath = path.resolve(targetPath, installPath, expectedIojsDirName(), "bin", "iojs")
     assert(fs.existsSync(installedIojsBinPath))
     return
   })
