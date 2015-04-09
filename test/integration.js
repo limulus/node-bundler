@@ -60,4 +60,12 @@ describe("Installation (integration tests)", function () {
       })
     })
   })
+
+  describe("binaryPath()", function () {
+    it("should return the path to the iojs binary relative to the target", function () {
+      var version = installation.version()
+      var expectedPath = path.join(installPath, expectedIojsDirName(), "bin", "iojs")
+      assert.strictEqual(installation.binaryPath(), expectedPath)
+    })
+  })
 })
