@@ -6,6 +6,10 @@ Bundle Node.js in native applications
 
 This module helps you automate including [Node.js](https://nodejs.org/) in binary distributions of your software. It handles the downloading of the Node.js version you specify, and lets you run npm from within the bundled Node.js environment — which is especially important for modules with native add-ons. It's actually kinda tricky to get this working right, so this module exists to make it so you don't have to worry about those details.
 
+## Compatibility
+
+This module was formerly called iojs-bundler, and as such it has not been tested on versions of Node.js prior to v4.0.0. It is also unlikely to work on Windows — but PRs for Windows support would be welcome!
+
 ## Usage
 
 An example, using [Gulp](http://gulpjs.com/), minus proper error handling:
