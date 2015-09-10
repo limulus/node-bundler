@@ -40,6 +40,6 @@
     "tar": "^2.0.1"
   },
   "optionalDependencies": {
-    "lzma-native": "^0.2.11"
+    "lzma-native": "^0.3.8"
   }
 }
