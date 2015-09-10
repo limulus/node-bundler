@@ -1,7 +1,7 @@
 {
-  "name": "iojs-bundler",
+  "name": "node-bundler",
   "version": "1.1.1",
-  "description": "Bundle io.js in native applications",
+  "description": "Bundle Node.js in native applications",
   "os": [
     "!win32"
   ],
@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/desertnet/iojs-bundler.git"
+    "url": "https://github.com/desertnet/node-bundler.git"
   },
   "keywords": [
-    "iojs",
+    "node",
     "bundler",
     "installer",
     "downloader",
@@ -23,9 +23,9 @@
   "author": "Eric McCarthy <eric@limulus.net> (http://www.limulus.net/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/desertnet/iojs-bundler/issues"
+    "url": "https://github.com/desertnet/node-bundler/issues"
   },
-  "homepage": "https://github.com/desertnet/iojs-bundler",
+  "homepage": "https://github.com/desertnet/node-bundler",
   "devDependencies": {
     "mocha": "^2.2.1",
     "rimraf": "^2.3.2"
