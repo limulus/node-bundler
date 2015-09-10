@@ -41,7 +41,7 @@ The `versionRange` is a [semver](https://npmjs.com/package/semver) range used to
 
 ### installer.install(relativeInstallPath, callback)
 
-Downloads and installs the Node.js binary distribution in a new directory, named something like `nodejs-v4.0.0-linux-x64`, inside the directory specified by `relativeInstallPath`. Note that `relativeInstallPath` is relative to the `targetPath` parameter given to the `nodeBundler()` function.
+Downloads and installs the Node.js binary distribution in a new directory, named something like `node-v4.0.0-linux-x64`, inside the directory specified by `relativeInstallPath`. Note that `relativeInstallPath` is relative to the `targetPath` parameter given to the `nodeBundler()` function.
 
 The `callback` is a function which will be called with an `error` as its first argument if there was an error during the install process. If there was no error, the second argument will be an `Installation` instance.
 
