@@ -10,7 +10,7 @@ var Installer = require("../lib/Installer.js")
 var targetPath = path.resolve(__dirname, "..", "dist", "my.bundle")
 var installPath = path.join("Resources", "ThirdParty")
 var modulePath = path.resolve(__dirname, "..", "fixtures", "some-module")
-var myiojsAppPath = path.join("Resources", "my-iojs-app")
+var myiojsAppPath = path.join("Resources", "my-node-app")
 
 describe("Installation (integration tests)", function () {
   var installer, installation
@@ -31,14 +31,14 @@ describe("Installation (integration tests)", function () {
   })
 
   var expectedIojsDirName = function () {
-    return "iojs"
+    return "node"
       + "-" + "v" + installation.version()
       + "-" + process.platform
       + "-" + process.arch
   }
 
-  it("should have installed something that looks like iojs", function () {
-    var installedIojsBinPath = path.resolve(targetPath, installPath, expectedIojsDirName(), "bin", "iojs")
+  it("should have installed something that looks like node", function () {
+    var installedIojsBinPath = path.resolve(targetPath, installPath, expectedIojsDirName(), "bin", "node")
     assert(fs.existsSync(installedIojsBinPath))
     return
   })
@@ -62,9 +62,9 @@ describe("Installation (integration tests)", function () {
   })
 
   describe("binaryPath()", function () {
-    it("should return the path to the iojs binary relative to the target", function () {
+    it("should return the path to the node binary relative to the target", function () {
       var version = installation.version()
-      var expectedPath = path.join(installPath, expectedIojsDirName(), "bin", "iojs")
+      var expectedPath = path.join(installPath, expectedIojsDirName(), "bin", "node")
       assert.strictEqual(installation.binaryPath(), expectedPath)
     })
   })
