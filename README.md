@@ -6,6 +6,8 @@ Bundle io.js in native applications
 
 This module helps you automate including [io.js](https://iojs.org/) in binary distributions of your software. It handles the downloading of the io.js version you specify, and lets you run npm from within the bundled io.js environment — which is especially important for modules with native add-ons. It's actually kinda tricky to get this working right, so this module exists to make it so you don't have to worry about those details.
 
+While io.js was great, now that io.js and Node.js have merged you may be more interested in [node-bundler](https://npmjs.com/package/node-bundler).
+
 ## Usage
 
 An example, using [Gulp](http://gulpjs.com/), minus proper error handling:
